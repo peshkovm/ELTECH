@@ -13,15 +13,15 @@ public abstract class GraphSearch<S,A> {
     }
 
     public Node<S,A> search(S state) {
-        fringe.add()
+        fringe.add(new Node<S,A>(state,null,null,0));
         while(true) {
             if(fringe.isEmpty())
                 return null;
             Node<S,A> node = fringe.poll();
-            if(Goal_Test(node.State()))
+            if(Goal_Test(node.getState()))
                 return Solution(node);
-            if(!closed.contains(node.State())){
-                closed.add(node.State());
+            if(!closed.contains(node.getState())){
+                closed.add(node.getState());
                 fringe.addAll(Expand(node));
             }
         }
