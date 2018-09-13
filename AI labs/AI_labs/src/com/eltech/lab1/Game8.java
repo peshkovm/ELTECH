@@ -17,10 +17,15 @@ class Matrix {
     public boolean equals(Object obj) {
         if (obj instanceof Matrix) {
             Matrix temp = (Matrix) obj;
-            if (Arrays.deepEquals(mas, temp.mas) && x == temp.x && y == temp.y)
+            if (Arrays.deepEquals(mas, temp.mas))
                 return true;
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.deepHashCode(mas);
     }
 }
 

@@ -1,11 +1,12 @@
 package com.eltech.lab1;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Queue;
 import java.util.Set;
 
 public abstract class GraphSearch<S, A> {
-    private Set<S> closed;
+    private Set<S> closed=new HashSet<S>();
     private Queue<Node<S, A>> fringe;
 
     public GraphSearch(Queue<Node<S, A>> fringe) {
