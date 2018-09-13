@@ -3,15 +3,34 @@ package com.eltech.lab1;
 import java.util.*;
 
 class Matrix {
-    Matrix(Integer[][] mas, int x, int y) {
+    public Matrix(Integer[][] mas, int x, int y) {
         this.mas = mas;
         this.x = x;
         this.y = y;
     }
 
-    Integer[][] mas;
-    int x;
-    int y;
+    public Matrix(Matrix matrix) {
+        Integer[][] temp = matrix.getMas();
+        for(int i=0;i<temp.length;i++) {
+            mas[i]=Arrays.copyOf(temp[i],temp[i].length);
+        }
+    }
+
+    public Integer[][] getMas() {
+        return mas;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    private Integer[][] mas;
+    private int x;
+    private int y;
 
     @Override
     public boolean equals(Object obj) {
@@ -51,6 +70,6 @@ public class Game8 extends GraphSearch<Matrix, String> {
 
     @Override
     protected Collection<Node<Matrix, String>> Expand(Node<Matrix, String> node) {
-
+        List<Node<Matrix,String>> ls = new ArrayList<Node<Matrix,String>>();
     }
 }
