@@ -7,31 +7,15 @@ import java.util.*;
 
 class Matrix {
 
-    public Matrix(Integer[][] mas, int x, int y) {
+    private int[] mas;
+    private int x;
+
+    public Matrix(int[] mas, int x) {
         this.mas = mas;
         this.x = x;
-        this.y = y;
     }
 
-    public void swap(int x, int y) {
-        Integer temp = mas[this.x][this.y];
-        mas[this.x][this.y] = mas[this.x + x][this.y + y];
-        mas[this.x + x][this.y + y] = temp;
-    }
-
-    public Matrix(Matrix matrix) {
-        Integer[][] temp = matrix.getMas();
-
-        mas = new Integer[3][];
-
-        for (int i = 0; i < temp.length; i++) {
-            mas[i] = Arrays.copyOf(temp[i], temp[i].length);
-        }
-        x = matrix.getX();
-        y = matrix.getY();
-    }
-
-    public Integer[][] getMas() {
+    public int[] getMas() {
         return mas;
     }
 
@@ -39,27 +23,15 @@ class Matrix {
         return x;
     }
 
-    public int getY() {
-        return y;
-    }
-
     public void setX(int x) {
         this.x = x;
     }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    private int[] mas;
-    private int x;
-    private int y;
 
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Matrix) {
             Matrix temp = (Matrix) obj;
-            if (Arrays.deepEquals(mas, temp.mas))
+            if (Arrays.equals(mas,temp.mas))
                 return true;
         }
         return false;
@@ -67,12 +39,12 @@ class Matrix {
 
     @Override
     public int hashCode() {
-        return Arrays.deepHashCode(mas);
+        return Arrays.hashCode(mas);
     }
 
     @Override
     public String toString() {
-        return Arrays.deepToString(mas);
+        return Arrays.toString(mas);
     }
 }
 
