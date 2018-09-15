@@ -9,4 +9,9 @@ public class Solution<S,A> extends ArrayList<Node<S,A>> {
     public Solution() {
         super();
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

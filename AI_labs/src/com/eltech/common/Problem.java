@@ -11,6 +11,11 @@ public abstract class Problem<S, A> {
         private A action;
         private S state;
 
+        public Pair(A action, S state) {
+            this.action = action;
+            this.state = state;
+        }
+
         public A getAction() {
             return action;
         }
@@ -28,8 +33,8 @@ public abstract class Problem<S, A> {
         }
     }
 
-    Problem (S state) {
-        InitialState=state;
+    public Problem(S state) {
+        InitialState = state;
     }
 
     public S getInitialState() {
@@ -38,10 +43,10 @@ public abstract class Problem<S, A> {
 
     private S InitialState;
 
-    abstract List<Pair<A, S>> Successor_Fn(S state);
+    abstract public List<Pair<A, S>> Successor_Fn(S state);
 
-    abstract boolean Goal_Test(S state);
+    abstract public boolean Goal_Test(S state);
 
-    abstract int Step_Cost(S state, A action, S new_state);
+    abstract public int Step_Cost(Node<S, A> node, A action, S state);
 
 }

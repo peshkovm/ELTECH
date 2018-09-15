@@ -6,6 +6,10 @@ public abstract class GraphSearch<S, A> {
     private Set<S> closed = new HashSet<S>();
     private Queue<Node<S, A>> fringe;
 
+    public GraphSearch(Queue<Node<S, A>> fringe) {
+        this.fringe = fringe;
+    }
+
     public Solution<S, A> search(Problem<S, A> problem) {
         fringe.add(new Node<S, A>(problem.getInitialState()));
         while (true) {
@@ -25,7 +29,7 @@ public abstract class GraphSearch<S, A> {
         List<Node<S, A>> successors = new ArrayList<Node<S, A>>();
 
         for (Problem.Pair<A, S> pair : problem.Successor_Fn(node.getState())) {
-            Node<S, A> s = new Node<S, A>(pair.getState(), pair.getAction(), node, node.getPath_Cost() + problem.Step_Cost(node.getState(), pair.getAction(), pair.getState()));
+            Node<S, A> s = new Node<S, A>(pair.getState(), pair.getAction(), node, node.getPath_Cost() + problem.Step_Cost(node, pair.getAction(), pair.getState()));
             successors.add(s);
         }
         return successors;

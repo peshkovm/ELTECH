@@ -2,6 +2,8 @@ package com.eltech.lab1;
 
 import com.eltech.common.GraphSearch;
 import com.eltech.common.Node;
+import com.eltech.common.Problem;
+import com.eltech.common.Solution;
 
 import java.util.*;
 
@@ -13,6 +15,11 @@ class Matrix {
     public Matrix(int[] mas, int x) {
         this.mas = mas;
         this.x = x;
+    }
+
+    public Matrix(Matrix matrix) {
+        this.mas = Arrays.copyOf(matrix.mas, matrix.mas.length);
+        x = matrix.getX();
     }
 
     public int[] getMas() {
@@ -31,10 +38,16 @@ class Matrix {
     public boolean equals(Object obj) {
         if (obj instanceof Matrix) {
             Matrix temp = (Matrix) obj;
-            if (Arrays.equals(mas,temp.mas))
+            if (Arrays.equals(mas, temp.mas))
                 return true;
         }
         return false;
+    }
+
+    public void swap(int x) {
+        int temp = mas[this.x];
+        mas[this.x] = mas[x];
+        mas[x] = temp;
     }
 
     @Override
@@ -50,63 +63,61 @@ class Matrix {
 
 public class Game8 extends GraphSearch<Matrix, String> {
 
-    List<Integer> a = new ArrayList<Integer>();
-
-    public Game8(Queue<Node<Matrix, String>> fringe) {
+    public Game8(ArrayDeque<Node<Matrix, String>> fringe) {
         super(fringe);
     }
 
-    @Override
-    protected Node<Matrix, String> Solution(Node<Matrix, String> node) {
-        return node;
+    public static void main(String[] args) {
+        Game8 game = new Game8(new ArrayDeque<Node<Matrix, String>>());
+        Solution<Matrix, String> solution = game.search(new ProblemGame8(new Matrix(new int[]{1, 3, 4, 0, 2, 5, 8, 7, 6}, 3)));
+
+        System.out.println(solution);
+    }
+}
+
+class ProblemGame8 extends Problem<Matrix, String> {
+
+    ProblemGame8(Matrix state) {
+        super(state);
     }
 
     @Override
-    protected boolean Goal_Test(Matrix state) {
-        if (state.equals(new Matrix(new Matrix(new Integer[][]{{1, null, 2}, {3, 4, 5}, {6, 7, 8}}, 0, 1))))
-            return true;
-        return false;
-    }
+    public List<Pair<String, Matrix>> Successor_Fn(Matrix state) {
+        List<Pair<String, Matrix>> ls = new ArrayList<Pair<String, Matrix>>();
 
-    @Override
-    protected Collection<Node<Matrix, String>> Expand(Node<Matrix, String> node) {
-        List<Node<Matrix, String>> ls = new ArrayList<Node<Matrix, String>>();
-        int x = node.getState().getX();
-        int y = node.getState().getY();
-        Matrix temp;
+        int x = state.getX();
+        Matrix matrix = new Matrix(state);
 
-        if (x != 0) {
-            temp = new Matrix(node.getState());
-            temp.swap(-1, 0);
-            temp.setX(temp.getX() - 1);
-            ls.add(new Node<Matrix, String>(temp, "left", node, node.getPath_Cost() + 1));
+        if (x != 0 && x != 1 && x != 2) {
+            matrix.swap(x - 3);
+            ls.add(new Pair<String, Matrix>("up", matrix));
         }
-        if (x != 2) {
-            temp = new Matrix(node.getState());
-            temp.swap(1, 0);
-            temp.setX(temp.getX() + 1);
-            ls.add(new Node<Matrix, String>(temp, "right", node, node.getPath_Cost() + 1));
+
+        if (x != 0 && x != 3 && x != 6) {
+            matrix.swap(x - 1);
+            ls.add(new Pair<String, Matrix>("left", matrix));
         }
-        if (y != 0) {
-            temp = new Matrix(node.getState());
-            temp.swap(0, -1);
-            temp.setY(temp.getY() - 1);
-            ls.add(new Node<Matrix, String>(temp, "up", node, node.getPath_Cost() + 1));
+
+        if (x != 6 && x != 7 && x != 8) {
+            matrix.swap(x + 3);
+            ls.add(new Pair<String, Matrix>("down", matrix));
         }
-        if (y != 2) {
-            temp = new Matrix(node.getState());
-            temp.swap(0, 1);
-            temp.setY(temp.getY() + 1);
-            ls.add(new Node<Matrix, String>(temp, "down", node, node.getPath_Cost() + 1));
+
+        if (x != 2 && x != 5 && x != 8) {
+            matrix.swap(x + 1);
+            ls.add(new Pair<String, Matrix>("right", matrix));
         }
 
         return ls;
     }
 
-    public static void main(String[] args) {
-        Game8 game = new Game8(new ArrayDeque<>());
-        Node<Matrix, String> node = game.search(new Matrix(new Integer[][]{{null, 1, 2}, {3, 4, 5}, {7, 6, 8}}, 0, 0));
-        if (node != null)
-            System.out.println(node.getState());
+    @Override
+    public boolean Goal_Test(Matrix state) {
+        return state.equals(new Matrix(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8}, 0));
+    }
+
+    @Override
+    public int Step_Cost(Node<Matrix, String> node, String action, Matrix new_state) {
+        return node.getPath_Cost() + 1;
     }
 }
