@@ -51,7 +51,7 @@ class Matrix {
         this.y = y;
     }
 
-    private Integer[][] mas;
+    private int[] mas;
     private int x;
     private int y;
 
