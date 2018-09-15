@@ -21,7 +21,13 @@ public abstract class GraphSearch<S, A> {
         }
     }
 
-    private Collection<Node<S, A>> Expand(Node<S, A> node, Problem<S,A> problem) {
+    private Collection<Node<S, A>> Expand(Node<S, A> node, Problem<S, A> problem) {
+        List<Node<S, A>> successors = new ArrayList<Node<S, A>>();
 
+        for (Problem.Pair<A, S> pair : problem.Successor_Fn(node.getState())) {
+            Node<S, A> s = new Node<S, A>(pair.getState(), pair.getAction(), node, node.getPath_Cost() + problem.Step_Cost(node.getState(), pair.getAction(), pair.getState()));
+            successors.add(s);
+        }
+        return successors;
     }
 }

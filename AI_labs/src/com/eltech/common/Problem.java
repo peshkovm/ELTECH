@@ -6,7 +6,7 @@ import java.util.Map;
 
 public abstract class Problem<S, A> {
 
-    static private class Pair<A, S> {
+    static public class Pair<A, S> {
 
         private A action;
         private S state;
