@@ -8,7 +8,7 @@ public class Node<S, A> {
     private int Path_Cost;
 
     public Node(S state) {
-        this(state,null,null,0);
+        this(state, null, null, 0);
     }
 
     public Node(S state, A action, Node<S, A> parent, int path_cost) {
@@ -36,6 +36,6 @@ public class Node<S, A> {
 
     @Override
     public String toString() {
-        return "State " + State;
+        return Action + " " + State;
     }
 }
