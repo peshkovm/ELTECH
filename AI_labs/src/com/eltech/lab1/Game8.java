@@ -1,5 +1,8 @@
 package com.eltech.lab1;
 
+import com.eltech.common.GraphSearch;
+import com.eltech.common.Node;
+
 import java.util.*;
 
 class Matrix {
@@ -88,7 +91,7 @@ public class Game8 extends GraphSearch<Matrix, String> {
 
     @Override
     protected boolean Goal_Test(Matrix state) {
-        if (state.equals(new Matrix(new Matrix(new Integer[][]{{null, 1, 3}, {4, 2, 5}, {7, 8, 6}}, 0, 0))))
+        if (state.equals(new Matrix(new Matrix(new Integer[][]{{1, null, 2}, {3, 4, 5}, {6, 7, 8}}, 0, 1))))
             return true;
         return false;
     }
@@ -130,7 +133,7 @@ public class Game8 extends GraphSearch<Matrix, String> {
 
     public static void main(String[] args) {
         Game8 game = new Game8(new ArrayDeque<>());
-        Node<Matrix, String> node = game.search(new Matrix(new Integer[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, null}}, 2, 2));
+        Node<Matrix, String> node = game.search(new Matrix(new Integer[][]{{null, 1, 2}, {3, 4, 5}, {7, 6, 8}}, 0, 0));
         if (node != null)
             System.out.println(node.getState());
     }

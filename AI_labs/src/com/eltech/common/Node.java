@@ -1,4 +1,4 @@
-package com.eltech.lab1;
+package com.eltech.common;
 
 public class Node<S, A> {
     public Node(S state, A action, Node<S, A> parent, int path_cost) {

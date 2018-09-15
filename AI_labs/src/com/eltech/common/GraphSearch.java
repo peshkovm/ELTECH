@@ -1,4 +1,4 @@
-package com.eltech.lab1;
+package com.eltech.common;
 
 import java.util.Collection;
 import java.util.HashSet;
