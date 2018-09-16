@@ -1,9 +1,6 @@
 package com.eltech.lab1;
 
-import com.eltech.common.GraphSearch;
-import com.eltech.common.Node;
-import com.eltech.common.Problem;
-import com.eltech.common.Solution;
+import com.eltech.common.*;
 
 import java.util.*;
 
@@ -61,15 +58,11 @@ class Matrix {
     }
 }
 
-public class Game8 extends GraphSearch<Matrix, String> {
-
-    public Game8(ArrayDeque<Node<Matrix, String>> fringe) {
-        super(fringe);
-    }
+public class Game8 extends DLSSearch<Matrix, String> {
 
     public static void main(String[] args) {
-        Game8 game = new Game8(new ArrayDeque<Node<Matrix, String>>());
-        Solution<Matrix, String> solution = game.search(new ProblemGame8(new Matrix(new int[]{1, 8, 2, 0, 4, 3, 7, 6, 5}, 3)));
+        Game8 game = new Game8();
+        Solution<Matrix, String> solution = game.search(new ProblemGame8(new Matrix(new int[]{1, 8, 2, 0, 4, 3, 7, 6, 5}, 3)),2);
 
         System.out.println(solution);
     }
