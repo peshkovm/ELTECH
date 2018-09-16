@@ -70,7 +70,6 @@ public class Game8 extends GraphSearch<Matrix, String> {
     public static void main(String[] args) {
         Game8 game = new Game8(new ArrayDeque<Node<Matrix, String>>());
         Solution<Matrix, String> solution = game.search(new ProblemGame8(new Matrix(new int[]{1, 8, 2, 0, 4, 3, 7, 6, 5}, 3)));
-        //new EightPuzzleDemo();
 
         System.out.println(solution);
     }

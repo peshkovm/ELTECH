@@ -3,8 +3,8 @@ package com.eltech.common;
 import java.util.*;
 
 public abstract class GraphSearch<S, A> {
-    private Set<S> closed = new HashSet<S>();
-    private Queue<Node<S, A>> fringe;
+    protected Set<S> closed = new HashSet<S>();
+    protected Queue<Node<S, A>> fringe;
 
     public GraphSearch(Queue<Node<S, A>> fringe) {
         this.fringe = fringe;
@@ -25,7 +25,7 @@ public abstract class GraphSearch<S, A> {
         }
     }
 
-    private Collection<Node<S, A>> Expand(Node<S, A> node, Problem<S, A> problem) {
+    protected Collection<Node<S, A>> Expand(Node<S, A> node, Problem<S, A> problem) {
         List<Node<S, A>> successors = new ArrayList<Node<S, A>>();
 
         for (Problem.Pair<A, S> pair : problem.Successor_Fn(node.getState())) {
