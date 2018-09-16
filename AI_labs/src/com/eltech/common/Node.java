@@ -36,6 +36,6 @@ public class Node<S, A> {
 
     @Override
     public String toString() {
-        return Action + " " + State;
+        return Action + "\n" + State +"\n";
     }
 }

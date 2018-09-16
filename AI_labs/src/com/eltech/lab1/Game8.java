@@ -54,21 +54,34 @@ class Matrix {
 
     @Override
     public String toString() {
-        return Arrays.toString(mas);
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < mas.length; i++) {
+            if (i % 3 == 0) {
+                str.append("\n");
+            }
+            str.append(mas[i] + " ");
+        }
+        return str.toString();
     }
 }
 
-public class Game8 extends DLSSearch<Matrix, String> {
+public class Game8 {
 
     public static void main(String[] args) {
-        Game8 game = new Game8();
-        Solution<Matrix, String> solution = game.search(new ProblemGame8(new Matrix(new int[]{1, 8, 2, 0, 4, 3, 7, 6, 5}, 3)),2);
+        BFSSearch<Matrix, String> obj = new BFSSearch<>();
+        long time = System.currentTimeMillis();
+        Solution<Matrix, String> solution = obj.search(new ProblemGame8(new Matrix(new int[]{0, 4, 3, 6, 2, 1, 7, 5, 8}, 0)));
+        long timeRes = System.currentTimeMillis();
 
         System.out.println(solution);
+
+        System.out.println(timeRes - time);
     }
 }
 
 class ProblemGame8 extends Problem<Matrix, String> {
+
+    Matrix goalState = new Matrix(new int[]{1, 2, 3, 4, 0, 5, 6, 7, 8}, 4);
 
     ProblemGame8(Matrix state) {
         super(state);
@@ -113,11 +126,11 @@ class ProblemGame8 extends Problem<Matrix, String> {
 
     @Override
     public boolean Goal_Test(Matrix state) {
-        return state.equals(new Matrix(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 0}, 8));
+        return state.equals(goalState);
     }
 
     @Override
     public int Step_Cost(Node<Matrix, String> node, String action, Matrix new_state) {
-        return node.getPath_Cost() + 1;
+        return 1;
     }
 }

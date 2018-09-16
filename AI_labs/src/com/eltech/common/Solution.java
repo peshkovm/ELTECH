@@ -1,6 +1,7 @@
 package com.eltech.common;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Solution<S, A> extends ArrayList<Node<S, A>> {
     public Solution(Node<S, A> node) {
@@ -20,6 +21,8 @@ public class Solution<S, A> extends ArrayList<Node<S, A>> {
                 this.add(node);
                 node = node.getParent();
             }
+
+            Collections.reverse(this);
 
             return super.toString();
         }
