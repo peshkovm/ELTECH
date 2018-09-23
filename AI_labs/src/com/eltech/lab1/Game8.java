@@ -1,5 +1,7 @@
 package com.eltech.lab1;
 
+//
+
 import com.eltech.common.*;
 
 import java.util.*;
