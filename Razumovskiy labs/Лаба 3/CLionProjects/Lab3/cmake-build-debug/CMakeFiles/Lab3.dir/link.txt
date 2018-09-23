@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Lab3.dir/main.cpp.o CMakeFiles/Lab3.dir/print_params.cpp.o  -o Lab3 

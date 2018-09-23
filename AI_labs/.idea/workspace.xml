@@ -45,15 +45,15 @@
     <session id="-1228445397">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="10" />
-          <entry key="project.open.time.7" value="5" />
+          <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -90,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/eltech/lab1/Game8.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="481">
-              <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+              <caret line="114" column="9" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#926#927#0" expanded="true" />
@@ -435,7 +435,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21108742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21321961" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -782,7 +782,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/eltech/lab1/Game8.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
-          <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+          <caret line="114" column="9" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#926#927#0" expanded="true" />
