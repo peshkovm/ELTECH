@@ -4,6 +4,9 @@ package com.eltech.lab1;
 
 import com.eltech.common.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 class Matrix {
@@ -69,21 +72,28 @@ class Matrix {
 
 public class Game8 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BFSSearch<Matrix, String> obj = new BFSSearch<>();
-        long time = System.currentTimeMillis();
-        Solution<Matrix, String> solution = obj.search(new ProblemGame8(new Matrix(new int[]{0, 4, 3, 6, 2, 1, 7, 5, 8}, 0)));
-        long timeRes = System.currentTimeMillis();
+        ProblemGame8 problem = new ProblemGame8(new Matrix(new int[]{0, 4, 3, 6, 2, 1, 7, 5, 8}, 0));
+        Solution<Matrix, String> solution;
+        long startTime;
 
-        System.out.println(solution);
+        while (true) {
+            startTime = System.currentTimeMillis();
+            solution = obj.search(problem);
+            System.out.println(solution);
+            System.out.println(solution + "\n" + "memory=" + solution.memory() + " time=" + (System.currentTimeMillis() - startTime));
 
-        System.out.println(timeRes - time);
+            System.out.println("Do you want to continue? y/n");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            if (reader.readLine().equals("n")) break;
+        }
     }
 }
 
 class ProblemGame8 extends Problem<Matrix, String> {
 
-    Matrix goalState = new Matrix(new int[]{1, 2, 3, 4, 0, 5, 6, 7, 8}, 4);
+    Matrix goalState = new Matrix(new int[]{4, 0, 3, 6, 2, 1, 7, 5, 8}, 1);
 
     ProblemGame8(Matrix state) {
         super(state);

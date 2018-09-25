@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Solution<S, A> extends ArrayList<Node<S, A>> {
-    public Solution(Node<S, A> node) {
+    int capacity;
+    int time;
+
+    public Solution(Node<S, A> node, int max_capacity) {
         this.add(node);
+        this.capacity = max_capacity;
     }
 
     public Solution() {
@@ -28,5 +32,9 @@ public class Solution<S, A> extends ArrayList<Node<S, A>> {
         }
 
         return super.toString();
+    }
+
+    public String memory() {
+        return String.valueOf(capacity);
     }
 }
