@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/39/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/denis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4505.18/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/39/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/denis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4505.18/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/CLionProjects/Lab_3_execl
+CMAKE_SOURCE_DIR = "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/CLionProjects/Lab_3_execl/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab_3_execl.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/Lab_3_execl.dir/flags.make
 
 CMakeFiles/Lab_3_execl.dir/main.cpp.o: CMakeFiles/Lab_3_execl.dir/flags.make
 CMakeFiles/Lab_3_execl.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_3_execl.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_3_execl.dir/main.cpp.o -c /home/denis/CLionProjects/Lab_3_execl/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_3_execl.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_3_execl.dir/main.cpp.o -c "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/main.cpp"
 
 CMakeFiles/Lab_3_execl.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_3_execl.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/denis/CLionProjects/Lab_3_execl/main.cpp > CMakeFiles/Lab_3_execl.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/main.cpp" > CMakeFiles/Lab_3_execl.dir/main.cpp.i
 
 CMakeFiles/Lab_3_execl.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_3_execl.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/denis/CLionProjects/Lab_3_execl/main.cpp -o CMakeFiles/Lab_3_execl.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/main.cpp" -o CMakeFiles/Lab_3_execl.dir/main.cpp.s
 
 CMakeFiles/Lab_3_execl.dir/print_params.cpp.o: CMakeFiles/Lab_3_execl.dir/flags.make
 CMakeFiles/Lab_3_execl.dir/print_params.cpp.o: ../print_params.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab_3_execl.dir/print_params.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_3_execl.dir/print_params.cpp.o -c /home/denis/CLionProjects/Lab_3_execl/print_params.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab_3_execl.dir/print_params.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_3_execl.dir/print_params.cpp.o -c "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/print_params.cpp"
 
 CMakeFiles/Lab_3_execl.dir/print_params.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_3_execl.dir/print_params.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/denis/CLionProjects/Lab_3_execl/print_params.cpp > CMakeFiles/Lab_3_execl.dir/print_params.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/print_params.cpp" > CMakeFiles/Lab_3_execl.dir/print_params.cpp.i
 
 CMakeFiles/Lab_3_execl.dir/print_params.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_3_execl.dir/print_params.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/denis/CLionProjects/Lab_3_execl/print_params.cpp -o CMakeFiles/Lab_3_execl.dir/print_params.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/print_params.cpp" -o CMakeFiles/Lab_3_execl.dir/print_params.cpp.s
 
 # Object files for target Lab_3_execl
 Lab_3_execl_OBJECTS = \
@@ -95,7 +95,7 @@ Lab_3_execl: CMakeFiles/Lab_3_execl.dir/main.cpp.o
 Lab_3_execl: CMakeFiles/Lab_3_execl.dir/print_params.cpp.o
 Lab_3_execl: CMakeFiles/Lab_3_execl.dir/build.make
 Lab_3_execl: CMakeFiles/Lab_3_execl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Lab_3_execl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Lab_3_execl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lab_3_execl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/Lab_3_execl.dir/clean:
 .PHONY : CMakeFiles/Lab_3_execl.dir/clean
 
 CMakeFiles/Lab_3_execl.dir/depend:
-	cd /home/denis/CLionProjects/Lab_3_execl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/CLionProjects/Lab_3_execl /home/denis/CLionProjects/Lab_3_execl /home/denis/CLionProjects/Lab_3_execl/cmake-build-debug /home/denis/CLionProjects/Lab_3_execl/cmake-build-debug /home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles/Lab_3_execl.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles/Lab_3_execl.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Lab_3_execl.dir/depend
 

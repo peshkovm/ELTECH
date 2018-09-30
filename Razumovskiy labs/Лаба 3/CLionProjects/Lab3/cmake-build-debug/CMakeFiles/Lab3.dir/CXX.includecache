@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/denis/CLionProjects/Lab3/main.cpp
+/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab3/main.cpp
 string
 -
 iostream
 -
 fstream
 -
+wait.h
+-
 printparams.h
-/home/denis/CLionProjects/Lab3/printparams.h
+/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab3/printparams.h
 
-/home/denis/CLionProjects/Lab3/printparams.h
+/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab3/printparams.h
 fstream
-/home/denis/CLionProjects/Lab3/fstream
+/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab3/fstream
 unistd.h
 -
 

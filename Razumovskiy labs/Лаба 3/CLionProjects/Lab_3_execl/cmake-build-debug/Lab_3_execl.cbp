@@ -8,89 +8,89 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug"/>
+				<Option working_dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug"/>
+				<Option working_dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug"/>
+				<Option working_dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab_3_execl">
-				<Option output="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Lab_3_execl" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug"/>
+				<Option output="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/Lab_3_execl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab_3_execl"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab_3_execl"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab_3_execl/fast">
-				<Option output="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Lab_3_execl" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug"/>
+				<Option output="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/Lab_3_execl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab_3_execl/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab_3_execl/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/denis/Desktop/ELTECH/Razumovskiy\ labs/Лаба\ 3/CLionProjects/Lab_3_execl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/denis/CLionProjects/Lab_3_execl/main.cpp">
+		<Unit filename="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/main.cpp">
 			<Option target="Lab_3_execl"/>
 		</Unit>
-		<Unit filename="/home/denis/CLionProjects/Lab_3_execl/print_params.cpp">
+		<Unit filename="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/print_params.cpp">
 			<Option target="Lab_3_execl"/>
 		</Unit>
-		<Unit filename="/home/denis/CLionProjects/Lab_3_execl/CMakeLists.txt">
+		<Unit filename="/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

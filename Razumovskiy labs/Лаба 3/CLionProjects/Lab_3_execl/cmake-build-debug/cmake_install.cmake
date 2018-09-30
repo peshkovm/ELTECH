@@ -1,4 +1,4 @@
-# Install script for directory: /home/denis/CLionProjects/Lab_3_execl
+# Install script for directory: /home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

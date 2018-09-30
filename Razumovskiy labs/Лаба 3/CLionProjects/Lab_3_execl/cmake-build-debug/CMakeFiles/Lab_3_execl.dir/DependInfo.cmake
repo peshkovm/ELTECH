@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/denis/CLionProjects/Lab_3_execl/main.cpp" "/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles/Lab_3_execl.dir/main.cpp.o"
-  "/home/denis/CLionProjects/Lab_3_execl/print_params.cpp" "/home/denis/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles/Lab_3_execl.dir/print_params.cpp.o"
+  "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/main.cpp" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles/Lab_3_execl.dir/main.cpp.o"
+  "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/print_params.cpp" "/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/cmake-build-debug/CMakeFiles/Lab_3_execl.dir/print_params.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

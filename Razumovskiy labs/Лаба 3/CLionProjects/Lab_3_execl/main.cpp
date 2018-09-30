@@ -12,7 +12,6 @@ int main(int argc, char **argv) {
     if (argc == 3) {
         sec = static_cast<unsigned int>(atoi(argv[1]));
         file.open(argv[2], ofstream::app);
-        cout << "execl file.fail " << file.fail() << endl;
     } else {
         cout << "error wrong arguments from execl" << endl;
         exit(0);
@@ -20,5 +19,6 @@ int main(int argc, char **argv) {
 
     sleep(sec);
     file << "Потомок 2:" << endl;
+    cout << "Потомок 2" << endl;
     print_params(file);
 }

@@ -6,8 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/home/denis/CLionProjects/Lab_3_execl/print_params.cpp
+/home/denis/Desktop/ELTECH/Razumovskiy labs/Лаба 3/CLionProjects/Lab_3_execl/main.cpp
 fstream
+-
+iostream
 -
 unistd.h
 -
