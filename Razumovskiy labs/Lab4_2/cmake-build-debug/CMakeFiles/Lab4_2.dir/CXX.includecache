@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/Desktop/Razumovskiy_labi/Lab4_2/main.cpp
+string
+-
+iostream
+-
+fstream
+-
+unistd.h
+-
+/usr/include/linux/sched.h
+-
+wait.h
+-
+
+/usr/include/linux/sched.h
+
