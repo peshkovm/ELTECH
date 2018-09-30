@@ -78,7 +78,7 @@ public class Game8 {
         Solution<Matrix, String> solution;
         long startTime;
 
-        while (true) {
+        /*while (true) {
             startTime = System.currentTimeMillis();
             solution = obj.search(problem);
             System.out.println(solution);
@@ -87,7 +87,9 @@ public class Game8 {
             System.out.println("Do you want to continue? y/n");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             if (reader.readLine().equals("n")) break;
-        }
+        }*/
+
+        obj.searhStep(problem);
     }
 }
 
@@ -109,28 +111,28 @@ class ProblemGame8 extends Problem<Matrix, String> {
             Matrix matrix = new Matrix(state);
             matrix.swap(x - 3);
             matrix.setX(x - 3);
-            ls.add(new Pair<String, Matrix>("up", matrix));
+            ls.add(new Pair<String, Matrix>("\u2191", matrix));
         }
 
         if (x != 0 && x != 3 && x != 6) {
             Matrix matrix = new Matrix(state);
             matrix.swap(x - 1);
             matrix.setX(x - 1);
-            ls.add(new Pair<String, Matrix>("left", matrix));
+            ls.add(new Pair<String, Matrix>("\u2190", matrix));
         }
 
         if (x != 6 && x != 7 && x != 8) {
             Matrix matrix = new Matrix(state);
             matrix.swap(x + 3);
             matrix.setX(x + 3);
-            ls.add(new Pair<String, Matrix>("down", matrix));
+            ls.add(new Pair<String, Matrix>("\u2193", matrix));
         }
 
         if (x != 2 && x != 5 && x != 8) {
             Matrix matrix = new Matrix(state);
             matrix.swap(x + 1);
             matrix.setX(x + 1);
-            ls.add(new Pair<String, Matrix>("right", matrix));
+            ls.add(new Pair<String, Matrix>("\u2192", matrix));
         }
 
         return ls;

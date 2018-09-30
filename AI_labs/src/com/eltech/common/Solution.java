@@ -22,7 +22,7 @@ public class Solution<S, A> {
     public String toString() {
         StringBuilder str = new StringBuilder();
         while (node != null) {
-            str.insert(0, node);
+            str.insert(0, node + "\n");
             node = node.getParent();
             depth++;
         }
