@@ -2,8 +2,6 @@ package com.eltech.common;
 
 public class DLSSearch<S, A> extends DFSSearch<S, A> {
 
-    int max = 0;
-
     static class Solution_Cutoff<S, A> extends Solution<S, A> {
         @Override
         public String toString() {
@@ -19,8 +17,9 @@ public class DLSSearch<S, A> extends DFSSearch<S, A> {
             if (fringe.isEmpty())
                 return cutoff_occured ? new Solution_Cutoff<S, A>() : new Solution<S, A>(); // empty
             Node<S, A> node = fringe.poll();
+            timeComplexity++;
             if (problem.Goal_Test(node.getState()))
-                return new Solution<S, A>(node, max);
+                return new Solution<S, A>(node, max, timeComplexity);
             if (node.getPath_Cost() == limit) {
                 cutoff_occured = true;
             } else if (!closed.contains(node.getState())) {

@@ -6,6 +6,7 @@ public abstract class GraphSearch<S, A> {
     protected Set<S> closed = new HashSet<S>();
     protected Queue<Node<S, A>> fringe;
     int max = 0;
+    int timeComplexity = 0;
 
     public GraphSearch(Queue<Node<S, A>> fringe) {
         this.fringe = fringe;
@@ -18,8 +19,9 @@ public abstract class GraphSearch<S, A> {
             if (fringe.isEmpty())
                 return new Solution<S, A>(); // empty
             Node<S, A> node = fringe.poll();
+            timeComplexity++;
             if (problem.Goal_Test(node.getState()))
-                return new Solution<S, A>(node, max);
+                return new Solution<S, A>(node, max, timeComplexity);
             if (!closed.contains(node.getState())) {
                 closed.add(node.getState());
                 fringe.addAll(Expand(node, problem));

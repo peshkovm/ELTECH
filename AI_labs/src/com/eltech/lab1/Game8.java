@@ -64,7 +64,7 @@ class Matrix {
             if (i % 3 == 0) {
                 str.append("\n");
             }
-            str.append(mas[i] + " ");
+            str.append(mas[i]).append(" ");
         }
         return str.toString();
     }
@@ -82,7 +82,7 @@ public class Game8 {
             startTime = System.currentTimeMillis();
             solution = obj.search(problem);
             System.out.println(solution);
-            System.out.println(solution + "\n" + "memory=" + solution.memory() + " time=" + (System.currentTimeMillis() - startTime));
+            System.out.println("memory=" + solution.memory() + " time in ms=" + (System.currentTimeMillis() - startTime) + " time complexity=" + solution.time() + " depth=" + solution.depth());
 
             System.out.println("Do you want to continue? y/n");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
