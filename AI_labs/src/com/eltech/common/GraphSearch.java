@@ -48,6 +48,7 @@ public abstract class GraphSearch<S, A> {
                 System.out.println("Finish" + node.getState());
                 return;
             }
+            System.out.println("closed= " + closed + "\n");
             if (!closed.contains(node.getState())) {
                 List<S> list = new ArrayList<S>();
                 closed.add(node.getState());
@@ -55,12 +56,10 @@ public abstract class GraphSearch<S, A> {
                     if (!closed.contains(a.getState())) {
                         fringe.add(a);
                         list.add(a.getState());
-                        closed.add(a.getState());
                     }
                 }
                 System.out.println("expanded=" + list + "\n");
             }
-            System.out.println("closed= " + closed + "\n");
 
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             reader.read();
@@ -70,15 +69,15 @@ public abstract class GraphSearch<S, A> {
     protected Collection<Node<S, A>> Expand(Node<S, A> node, Problem<S, A> problem) {
         List<Node<S, A>> successors = new ArrayList<Node<S, A>>();
 
-/*        for (Problem.Pair<A, S> pair : problem.Successor_Fn(node.getState())) {
+        for (Problem.Pair<A, S> pair : problem.Successor_Fn(node.getState())) {
             Node<S, A> s = new Node<S, A>(pair.getState(), pair.getAction(), node, node.getPath_Cost() + problem.Step_Cost(node, pair.getAction(), pair.getState()));
             successors.add(s);
-        }*/
+        }
 
-        problem.Successor_Fn(node.getState()).forEach(pair -> {
+        /*problem.Successor_Fn(node.getState()).forEach(pair -> {
             Node<S, A> s = new Node<S, A>(pair.getState(), pair.getAction(), node, node.getPath_Cost() + problem.Step_Cost(node, pair.getAction(), pair.getState()));
             successors.add(s);
-        });
+        });*/
 
         return successors;
     }
