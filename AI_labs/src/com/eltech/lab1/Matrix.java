@@ -8,9 +8,13 @@ public class Matrix implements Iterable<Integer> {
     private int[] mas;
     private int x;
 
-    public Matrix(int[] mas, int x) {
+    public Matrix(int[] mas) {
         this.mas = mas;
-        this.x = x;
+
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] == 0)
+                this.x = i;
+        }
     }
 
     public Matrix(Matrix matrix) {

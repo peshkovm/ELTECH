@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Solution<S, A> {
     int capacity = 0;
-    Node<S, A> node = null;
+    public Node<S, A> node = null;
     int depth = 0;
     int time;
 
@@ -16,6 +16,10 @@ public class Solution<S, A> {
     }
 
     public Solution() {
+    }
+
+    public int getPathCost() {
+        return node != null ? node.getPath_Cost() : 0;
     }
 
     @Override
@@ -39,5 +43,9 @@ public class Solution<S, A> {
 
     public String time() {
         return String.valueOf(time);
+    }
+
+    public boolean isExists() {
+        return node != null;
     }
 }

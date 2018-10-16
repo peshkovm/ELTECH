@@ -5,7 +5,7 @@ import java.util.List;
 
 public class IDSSearch<S, A> {
 
-    private DLSSearch<S, A> obj = new DLSSearch<>();
+    //private DLSSearch<S, A> obj = new DLSSearch<>();
 
     private List<Node<S, A>> list1 = new ArrayList<>();
     private List<S> list2 = new ArrayList<>();
@@ -16,6 +16,7 @@ public class IDSSearch<S, A> {
 
         Solution<S, A> solution = null;
         for (; depth < Integer.MAX_VALUE; depth++) {
+            DLSSearch<S, A> obj = new DLSSearch<>();
             solution = obj.search(problem, depth);
 
             if (!(solution instanceof DLSSearch.Solution_Cutoff)) {

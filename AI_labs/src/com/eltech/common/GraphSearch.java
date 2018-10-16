@@ -10,6 +10,7 @@ public abstract class GraphSearch<S, A> {
     protected Queue<Node<S, A>> fringe;
     int max = 0;
     int timeComplexity = 0;
+    public int maxPathCost = 0;
 
     public GraphSearch(Queue<Node<S, A>> fringe) {
         this.fringe = fringe;
@@ -71,6 +72,8 @@ public abstract class GraphSearch<S, A> {
 
         for (Problem.Pair<A, S> pair : problem.Successor_Fn(node.getState())) {
             Node<S, A> s = new Node<S, A>(pair.getState(), pair.getAction(), node, node.getPath_Cost() + problem.Step_Cost(node, pair.getAction(), pair.getState()));
+            if (s.getPath_Cost() > maxPathCost)
+                maxPathCost = s.getPath_Cost();
             successors.add(s);
         }
 
