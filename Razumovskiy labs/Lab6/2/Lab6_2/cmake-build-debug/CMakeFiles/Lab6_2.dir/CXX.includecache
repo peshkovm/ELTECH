@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/Desktop/Razumovskiy_labi/Lab6/2/Lab6_2/main.cpp
+iostream
+-
+unistd.h
+-
+sys/time.h
+-
+signal.h
+-
+
