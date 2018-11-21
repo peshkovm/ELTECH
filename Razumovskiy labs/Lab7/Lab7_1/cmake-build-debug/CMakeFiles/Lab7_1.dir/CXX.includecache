@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/Desktop/Razumovskiy_labi/Lab7/Lab7_1/main.cpp
+iostream
+-
+fstream
+-
+unistd.h
+-
+fcntl.h
+-
+wait.h
+-
+
