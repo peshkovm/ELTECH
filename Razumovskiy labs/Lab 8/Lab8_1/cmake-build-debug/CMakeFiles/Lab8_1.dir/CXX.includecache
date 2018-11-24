@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/Desktop/Razumovskiy_labi/Lab8/Lab8_1/main.cpp
+iostream
+-
+sys/types.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+signal.h
+-
+unistd.h
+-
+csignal
+-
+thread
+-
+
