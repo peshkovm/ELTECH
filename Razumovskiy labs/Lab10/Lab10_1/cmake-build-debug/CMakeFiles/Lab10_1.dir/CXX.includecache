@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/Desktop/Razumovskiy_labi/Lab10/Lab10_1/main.cpp
+iostream
+-
+fstream
+-
+sys/shm.h
+-
+sys/ipc.h
+-
+sys/types.h
+-
+sys/sem.h
+-
+
