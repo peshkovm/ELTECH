@@ -51,8 +51,8 @@ void dequeue() {
     if (++takeIndex == ARRAYSIZE) takeIndex = 0;
     cout << num << endl;
     (queue->count)--;
-    int b = pthread_cond_signal(&queue->notFull);
-    cout << "b = " << b << endl;
+    //int b = pthread_cond_signal(&queue->notFull);
+    int b = pthread_cond_broadcast(&queue->notFull);
 }
 
 void exitInit() {
@@ -93,13 +93,12 @@ int main() {
     //TODO заменить clone на pthread_create
 
     for (;;) {
-        pthread_mutex_lock(&queue->mutex);
+        int a1 = pthread_mutex_lock(&queue->mutex);
         while (queue->count == 0) {
             cout << "consumer: queue EMPTY" << endl;
             pthread_cond_wait(&queue->notEmpty, &queue->mutex);
         }
         dequeue();
         int a = pthread_mutex_unlock(&queue->mutex);
-        cout << "a = " << a << endl;
     }
 }

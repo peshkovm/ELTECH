@@ -35,18 +35,44 @@ Queue queueInit() {
     Queue q;
 
     for (int i = 0; i < ARRAYSIZE; i++) q.buf[i] = 0;
-    q.mutex = PTHREAD_MUTEX_INITIALIZER;
-    q.notFull = PTHREAD_COND_INITIALIZER;
-    q.notEmpty = PTHREAD_COND_INITIALIZER;
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED);
+    pthread_mutex_init(&q.mutex, &attr);
+    pthread_condattr_t attrcond;
+    pthread_condattr_init(&attrcond);
+    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
+    pthread_cond_init(&q.notFull, &attrcond);
+    pthread_condattr_t attrcond1;
+    pthread_condattr_init(&attrcond1);
+    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
+    pthread_cond_init(&q.notEmpty, &attrcond1);
     q.count = 0;
 
     return q;
 }
 
-void shareQueue() {
-    Queue q = queueInit();
+void queueInit(Queue *q) {
+    for (int i = 0; i < ARRAYSIZE; i++) q->buf[i] = 0;
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED);
+    pthread_mutex_init(&q->mutex, &attr);
+    pthread_condattr_t attrcond;
+    pthread_condattr_init(&attrcond);
+    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
+    pthread_cond_init(&q->notFull, &attrcond);
+    pthread_condattr_t attrcond1;
+    pthread_condattr_init(&attrcond1);
+    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
+    pthread_cond_init(&q->notEmpty, &attrcond1);
+    q->count = 0;
+}
 
-    if ((shmQueueId = shmget(111, sizeof(q), 0666 | IPC_CREAT)) == -1) {
+void shareQueue() {
+    //Queue q = queueInit();
+
+    if ((shmQueueId = shmget(111, sizeof(Queue), 0666 | IPC_CREAT)) == -1) {
         deleteIds();
     }
     cout << "shmQueueId" << shmQueueId << endl;
@@ -55,7 +81,8 @@ void shareQueue() {
         deleteIds();
     }
 
-    *queue = q;
+    // *queue = q;
+    queueInit(queue);
 }
 
 void enqueue(string line) {
@@ -64,7 +91,8 @@ void enqueue(string line) {
     if (++putIndex == ARRAYSIZE) putIndex = 0;
     cout << num << endl;
     (queue->count)++;
-    pthread_cond_signal(&queue->notEmpty);
+    //pthread_cond_signal(&queue->notEmpty);
+    pthread_cond_broadcast(&queue->notEmpty);
 }
 
 void exit() {
@@ -87,7 +115,7 @@ void exit() {
 }
 
 int main() {
-    string inFileName = "/home/max/Desktop/Razumovskiy_labi/Lab10/Lab10_1/inFile.txt";
+    string inFileName = "/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_1/inFile.txt";
     ifstream inFile(inFileName);
     string line;
 

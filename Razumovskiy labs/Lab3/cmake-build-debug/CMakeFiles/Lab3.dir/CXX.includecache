@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/max/Desktop/Razumovskiy_labi/Lab3/main.cpp
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab3/main.cpp
 string
 -
 iostream
@@ -18,9 +18,7 @@ wait.h
 /home/max/Desktop/Razumovskiy_labi/Lab3/writeAttrs.h
 -
 
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab3/writeAttrs.cpp
 /home/max/Desktop/Razumovskiy_labi/Lab3/writeAttrs.h
-fstream
--
-unistd.h
 -
 

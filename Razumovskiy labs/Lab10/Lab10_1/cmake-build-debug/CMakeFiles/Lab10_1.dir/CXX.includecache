@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/max/Desktop/Razumovskiy_labi/Lab10/Lab10_1/main.cpp
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_1/main.cpp
 iostream
 -
 fstream
@@ -18,5 +18,7 @@ sys/ipc.h
 sys/types.h
 -
 sys/sem.h
+-
+pthread.h
 -
 
