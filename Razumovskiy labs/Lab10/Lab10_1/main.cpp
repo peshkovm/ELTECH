@@ -9,11 +9,12 @@
 using namespace std;
 
 #define ARRAYSIZE 5
+#define PRODSEM 0
+#define CONSSEM 1
 
 typedef struct {
     int buf[ARRAYSIZE];
-    pthread_mutex_t mutex;
-    pthread_cond_t notFull, notEmpty;
+    int semId;
     int count;
 } Queue;
 
@@ -23,9 +24,7 @@ int putIndex = 0;
 
 void deleteIds() {
     cout << "delete all ids" << endl;
-    pthread_mutex_destroy(&queue->mutex);
-    pthread_cond_destroy(&queue->notFull);
-    pthread_cond_destroy(&queue->notEmpty);
+    semctl(queue->semId, IPC_RMID, 0);
     shmdt(queue);
     shmctl(shmQueueId, IPC_RMID, nullptr);
     exit(1);
@@ -35,18 +34,7 @@ Queue queueInit() {
     Queue q;
 
     for (int i = 0; i < ARRAYSIZE; i++) q.buf[i] = 0;
-    pthread_mutexattr_t attr;
-    pthread_mutexattr_init(&attr);
-    pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED);
-    pthread_mutex_init(&q.mutex, &attr);
-    pthread_condattr_t attrcond;
-    pthread_condattr_init(&attrcond);
-    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
-    pthread_cond_init(&q.notFull, &attrcond);
-    pthread_condattr_t attrcond1;
-    pthread_condattr_init(&attrcond1);
-    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
-    pthread_cond_init(&q.notEmpty, &attrcond1);
+    q.semId = semget(100, 2, IPC_CREAT | 0666);
     q.count = 0;
 
     return q;
@@ -54,18 +42,9 @@ Queue queueInit() {
 
 void queueInit(Queue *q) {
     for (int i = 0; i < ARRAYSIZE; i++) q->buf[i] = 0;
-    pthread_mutexattr_t attr;
-    pthread_mutexattr_init(&attr);
-    pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED);
-    pthread_mutex_init(&q->mutex, &attr);
-    pthread_condattr_t attrcond;
-    pthread_condattr_init(&attrcond);
-    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
-    pthread_cond_init(&q->notFull, &attrcond);
-    pthread_condattr_t attrcond1;
-    pthread_condattr_init(&attrcond1);
-    pthread_condattr_setpshared(&attrcond, PTHREAD_PROCESS_SHARED);
-    pthread_cond_init(&q->notEmpty, &attrcond1);
+    q->semId = semget(100, 2, IPC_CREAT | 0666);
+    semctl(q->semId, CONSSEM, SETVAL, 0);
+    semctl(q->semId, PRODSEM, SETVAL, 1);
     q->count = 0;
 }
 
@@ -75,7 +54,7 @@ void shareQueue() {
     if ((shmQueueId = shmget(111, sizeof(Queue), 0666 | IPC_CREAT)) == -1) {
         deleteIds();
     }
-    cout << "shmQueueId" << shmQueueId << endl;
+    cout << "shmQueueId = " << shmQueueId << endl;
 
     if ((queue = (Queue *) shmat(shmQueueId, 0, 0)) == (Queue *) -1) {
         deleteIds();
@@ -85,14 +64,26 @@ void shareQueue() {
     queueInit(queue);
 }
 
+void prodAcquire() {
+    struct sembuf op = {PRODSEM, -1, 0};
+    semop(queue->semId, &op, 1);
+}
+
+void consRelease() {
+    struct sembuf op = {CONSSEM, 1, 0};
+    semop(queue->semId, &op, 1);
+}
+
 void enqueue(string line) {
+    prodAcquire();
+
     int num = stoi(line);
     queue->buf[putIndex] = num;
     if (++putIndex == ARRAYSIZE) putIndex = 0;
     cout << num << endl;
     (queue->count)++;
-    //pthread_cond_signal(&queue->notEmpty);
-    pthread_cond_broadcast(&queue->notEmpty);
+
+    consRelease();
 }
 
 void exit() {
@@ -122,13 +113,7 @@ int main() {
     shareQueue();   // ИНИЦИАЛИЗАЦИЯ
 
     for (; getline(inFile, line);) {
-        pthread_mutex_lock(&queue->mutex);
-        while (queue->count == ARRAYSIZE) {
-            cout << "producer: queue FULL" << endl;
-            pthread_cond_wait(&queue->notFull, &queue->mutex);
-        }
         enqueue(line);
-        pthread_mutex_unlock(&queue->mutex);
     }
 
     while (queue->count != 0);
