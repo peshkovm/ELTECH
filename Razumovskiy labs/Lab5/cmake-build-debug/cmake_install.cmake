@@ -1,4 +1,4 @@
-# Install script for directory: /home/max/Desktop/Razumovskiy_labi/Lab5
+# Install script for directory: /home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/max/Desktop/Razumovskiy_labi/Lab5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
