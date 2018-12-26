@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <wait.h>
-#include "/home/max/Desktop/Razumovskiy_labi/Lab3/writeAttrs.h"
+#include "writeAttrs.h"
 
 using namespace std;
 

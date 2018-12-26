@@ -2,7 +2,7 @@
 // Created by max on 23.09.18.
 //
 
-#include "/home/max/Desktop/Razumovskiy_labi/Lab3/writeAttrs.h"
+#include "writeAttrs.h"
 
 void writeAttrs(ofstream &file) {
     file << "Идентификатор процесса = " << getpid() << endl;

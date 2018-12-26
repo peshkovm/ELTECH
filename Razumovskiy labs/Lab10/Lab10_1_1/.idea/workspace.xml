@@ -13,14 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3521b0f4-9076-47ac-bc34-5d8a3d51e44b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Lab10_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/CMakeFiles/Lab10_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/CMakeFiles/Lab10_1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/Lab10_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/Lab10_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab10_1/inFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/inFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab10_1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab10_1_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab10_1_1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Lab10_1_1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Lab10_1_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,14 +26,14 @@
     <session id="-1562470981">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -71,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            <state relative-caret-position="421">
+              <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -112,7 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +115,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,6 +195,7 @@
       <workItem from="1545610423486" duration="22000" />
       <workItem from="1545610457470" duration="3831000" />
       <workItem from="1545644324935" duration="867000" />
+      <workItem from="1545646060472" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="Works on semaphores">
       <created>1544284710407</created>
@@ -215,7 +208,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88022000" />
+    <option name="totallyTimeSpent" value="88320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -228,8 +221,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="737" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18106061" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18409091" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,8 +319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        <state relative-caret-position="421">
+          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
