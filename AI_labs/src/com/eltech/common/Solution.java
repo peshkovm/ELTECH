@@ -28,7 +28,7 @@ public class Solution<S, A> {
         while (node != null) {
             str.insert(0, node + "\n");
             node = node.getParent();
-            depth++;
+            //depth++;
         }
         return str.toString();
     }

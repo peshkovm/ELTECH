@@ -36,6 +36,6 @@ public class Node<S, A> {
 
     @Override
     public String toString() {
-        return "\n" + Action + " " + State + " " + getPath_Cost();
+        return "\n" + Action + " " + State;
     }
 }

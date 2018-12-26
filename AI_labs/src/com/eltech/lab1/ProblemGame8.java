@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProblemGame8 extends Problem<Matrix, String> {
 
-    public static final Matrix goalState = new Matrix(new int[]{4, 3, 6, 2, 0, 1, 7, 5, 8});
+    public static final Matrix goalState = new Matrix(new int[]{1, 2, 3, 4, 0, 5, 6, 7, 8});
 
     public ProblemGame8(Matrix state) {
         super(state);
