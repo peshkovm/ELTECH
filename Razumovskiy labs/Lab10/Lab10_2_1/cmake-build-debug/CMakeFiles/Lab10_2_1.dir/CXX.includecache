@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_2_1/main.cpp
+iostream
+-
+fstream
+-
+sys/shm.h
+-
+sys/ipc.h
+-
+sys/types.h
+-
+sys/sem.h
+-
+unistd.h
+-
+
