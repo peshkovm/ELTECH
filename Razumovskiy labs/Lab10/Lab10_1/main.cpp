@@ -5,12 +5,17 @@
 #include <sys/types.h>
 #include <sys/sem.h>
 #include <pthread.h>
+#include <unistd.h>
 
 using namespace std;
 
 #define ARRAYSIZE 5
 #define PRODSEM 0
 #define CONSSEM 1
+#define SYNCSEM 2
+#define CONS_READ_WHOLE_BUFFER 0
+#define SYNC_INITIAL_STATE 1
+#define PROD_FINISH_WORK 2
 
 typedef struct {
     int buf[ARRAYSIZE];
@@ -30,21 +35,12 @@ void deleteIds() {
     exit(1);
 }
 
-Queue queueInit() {
-    Queue q;
-
-    for (int i = 0; i < ARRAYSIZE; i++) q.buf[i] = 0;
-    q.semId = semget(100, 2, IPC_CREAT | 0666);
-    q.count = 0;
-
-    return q;
-}
-
 void queueInit(Queue *q) {
     for (int i = 0; i < ARRAYSIZE; i++) q->buf[i] = 0;
-    q->semId = semget(100, 2, IPC_CREAT | 0666);
+    q->semId = semget(100, 3, IPC_CREAT | 0666);
     semctl(q->semId, CONSSEM, SETVAL, 0);
-    semctl(q->semId, PRODSEM, SETVAL, 1);
+    semctl(q->semId, PRODSEM, SETVAL, ARRAYSIZE);  //1
+    semctl(q->semId, SYNCSEM, SETVAL, SYNC_INITIAL_STATE); //1
     q->count = 0;
 }
 
@@ -86,25 +82,6 @@ void enqueue(string line) {
     consRelease();
 }
 
-void exit() {
-    int exitId;
-    bool *exitAddr;
-    if ((exitId = shmget(20, sizeof(bool), 0666 | IPC_CREAT)) == -1) {
-        deleteIds();
-    }
-
-    if ((exitAddr = (bool *) shmat(exitId, 0, 0)) == (bool *) -1) {
-        deleteIds();
-    }
-
-    exitAddr[0] = true;
-
-    if ((shmdt(exitAddr)) == -1) {
-        shmctl(exitId, IPC_RMID, nullptr);
-        deleteIds();
-    }
-}
-
 int main() {
     string inFileName = "/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_1/inFile.txt";
     ifstream inFile(inFileName);
@@ -113,12 +90,24 @@ int main() {
     shareQueue();   // ИНИЦИАЛИЗАЦИЯ
 
     for (; getline(inFile, line);) {
+        if (semctl(queue->semId, SYNCSEM, GETVAL, nullptr) == CONS_READ_WHOLE_BUFFER)
+            semctl(queue->semId, SYNCSEM, SETVAL, SYNC_INITIAL_STATE);
+
         enqueue(line);
     }
 
-    while (queue->count != 0);
+    struct sembuf op = {SYNCSEM, 0, 0}; //wait for zero (CONS_READ_WHOLE_BUFFER)
+    semop(queue->semId, &op, 1);
+    //<-CONS read whole buffer
+    cout << "CONS read whole buffer" << endl;
+    semctl(queue->semId, SYNCSEM, SETVAL, PROD_FINISH_WORK); //2
+    consRelease();
 
-    exit();
+    struct sembuf op1 = {SYNCSEM, 0, 0}; //wait for zero
+    semop(queue->semId, &op, 1);
+    //<-CONS finished work
+    cout << "CONS finished work" << endl;
+    deleteIds();
 
     return 0;
 }

@@ -6,13 +6,18 @@
 #include <sys/sem.h>
 #include <signal.h>
 #include <pthread.h>
+#include <unistd.h>
 
 using namespace std;
 
 #define ARRAYSIZE 5
 #define PRODSEM 0
 #define CONSSEM 1
-#define STACK 1024*64
+#define SYNCSEM 2
+#define CONS_READ_WHOLE_BUFFER 0
+#define CONS_FINISH_WORK 0
+#define SYNC_INITIAL_STATE 1
+#define PROD_FINISH_WORK 2
 
 struct Queue {
     int buf[ARRAYSIZE];
@@ -22,14 +27,11 @@ struct Queue {
 
 Queue *queue;
 int shmQueueId;
-int exitId;
-bool *exitAddr;
 int takeIndex = 0;
 
 void deleteIds() {
     cout << "delete all ids" << endl;
-    shmdt(exitAddr);
-    shmctl(exitId, IPC_RMID, nullptr);
+    semctl(queue->semId, IPC_RMID, 0);
     shmdt(queue);
     shmctl(shmQueueId, IPC_RMID, nullptr);
     exit(1);
@@ -44,9 +46,10 @@ void shareQueue() {
         }
 
         for (int i = 0; i < ARRAYSIZE; i++) queue->buf[i] = 0;
-        queue->semId = semget(100, 2, IPC_CREAT | 0666);
+        queue->semId = semget(100, 3, IPC_CREAT | 0666);
         semctl(queue->semId, CONSSEM, SETVAL, 0);
-        semctl(queue->semId, PRODSEM, SETVAL, 1);
+        semctl(queue->semId, PRODSEM, SETVAL, ARRAYSIZE);  //1
+        semctl(queue->semId, SYNCSEM, SETVAL, SYNC_INITIAL_STATE);
         queue->count = 0;
 
     } else {
@@ -71,8 +74,20 @@ void prodRelease() {
     semop(queue->semId, &op, 1);
 }
 
+bool isProducerFinished() {
+    return semctl(queue->semId, SYNCSEM, GETVAL, nullptr) == PROD_FINISH_WORK;
+}
+
 void dequeue() {
+    //cout << "before consAcquire(): " << semctl(queue->semId, CONSSEM, GETVAL, nullptr) << endl;
     consAcquire();
+    //cout << "after consAcquire(): " << semctl(queue->semId, CONSSEM, GETVAL, nullptr) << endl;
+
+    if (isProducerFinished()) {
+        cout << "return from dequeue" << endl;
+        return;
+    }
+
     int num = queue->buf[takeIndex];
     queue->buf[takeIndex] = 0;
     if (++takeIndex == ARRAYSIZE) takeIndex = 0;
@@ -81,40 +96,27 @@ void dequeue() {
     prodRelease();
 }
 
-void exitInit() {
-    if ((exitId = shmget(20, sizeof(bool), 0666 | IPC_CREAT)) == -1) {
-        deleteIds();
-    }
-
-    if ((exitAddr = (bool *) shmat(exitId, 0, 0)) == (bool *) -1) {
-        deleteIds();
-    }
-}
-
-bool isSupplierExit() {
-    return *exitAddr;
-}
-
-void *threadJob(void *arg) {
-    while (!(queue->count == 0 && isSupplierExit()));
-
-    deleteIds();
-
-    return 0;
-}
-
 int main() {
     pthread_t p;
     string line;
 
-    exitInit();     //
     shareQueue();   // ИНИЦИАЛИЗАЦИЯ
-
-    pthread_create(&p, NULL, threadJob, NULL);
-
-    //TODO заменить clone на pthread_create
 
     for (;;) {
         dequeue();
+
+        if (queue->count == 0) {
+            if (isProducerFinished()) {
+                cout << "break occured" << endl;
+                break;
+            }
+            semctl(queue->semId, SYNCSEM, SETVAL, CONS_READ_WHOLE_BUFFER);
+        }
     }
+
+    cout << "PROD finished work" << endl;
+    semctl(queue->semId, SYNCSEM, SETVAL, CONS_FINISH_WORK);
+
+
+    deleteIds();
 }

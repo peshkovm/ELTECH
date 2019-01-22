@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/lab10_1/lab10_2/common.h
+stdio.h
+-
+unistd.h
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/lab10_1/lab10_2/unistd.h
+sys/ipc.h
+-
+sys/shm.h
+-
+sys/sem.h
+-
+stdlib.h
+-
+sys/types.h
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/lab10_1/lab10_2/sys/types.h
+errno.h
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/lab10_1/lab10_2/errno.h
+
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/lab10_1/lab10_2/main.cpp
+common.h
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/lab10_1/lab10_2/common.h
+

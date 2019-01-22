@@ -1,0 +1,3 @@
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_2_1_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_2_1_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_2_1_1/cmake-build-debug/CMakeFiles/Lab10_2_1_1.dir

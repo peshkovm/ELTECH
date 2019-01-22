@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/manager.dir/main.cpp.o  -o manager 

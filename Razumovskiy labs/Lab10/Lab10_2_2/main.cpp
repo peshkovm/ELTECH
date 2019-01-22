@@ -7,42 +7,20 @@
 
 using namespace std;
 
-int mutId = 0;
-int readmutId = 0;
-int b=0;
+int readersId=0;
 
-#define SETVALUE 1
-
-void mutInit() {
-    mutId = semget(100, 1, IPC_CREAT | 0666); //инициализация семафора
+void readersInit() {
+    readersId = semget(101, 1, IPC_CREAT | 0666);
 }
 
-void readmutInit() {
-    if ((readmutId = semget(101, 1, IPC_CREAT | 0666)) < 0) {
-        cerr << "Семафор не создан" << endl;
-        exit(-1);
-    }
-    semctl(readmutId, 0, SETVAL, SETVALUE);// установка семафора в изаначальное значение 1
+void readersAcquire() {
+    struct sembuf op = {0, -1, 0}; //операция захвата
+    semop(readersId, &op, 1);
 }
 
-void mutAcquire() {
-    struct sembuf op = {0, -1, 0}; //захват семафора
-    semop(mutId, &op, 1);
-}
-
-void mutRelease() {
-    struct sembuf op = {0, 1, 0}; //освобождение семафора
-    semop(mutId, &op, 1);
-}
-
-void readmutAcquire() {
-    struct sembuf op = {0, -1, 0};
-    semop(readmutId, &op, 1);
-}
-
-void readmutRelease() {
-    struct sembuf op = {0, 1, 0};
-    semop(readmutId, &op, 1);
+void readersRelease() {
+    struct sembuf op = {0, 1, 0}; //операция освобождения
+    semop(readersId, &op, 1);
 }
 
 int main() {
@@ -50,14 +28,15 @@ int main() {
     ifstream inFile(inFileName);
     string line;
 
-    mutInit();
-    readmutInit();
+    no_writersInit();
+    readersInit();
+    counter_mutexInit();
 
-    readmutAcquire();
-    b++;
-    if(b==1) {
-        mutAcquire();
-    }
+    no_writersAcquire();
+    counter_mutexAcquire();
+    prev_=nreaders;
+    nreaders++;
+    if(prev)
     readmutRelease();
 
     while (getline(inFile, line)) {

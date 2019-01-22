@@ -12,19 +12,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38434c8c-84b1-4543-9308-4d561116c3b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab10_2_1/file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab 8/Lab8_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8/Lab8_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab 8/Lab8_1_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8/Lab8_1_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab 8/Lab8_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8/Lab8_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab 8/Lab8_2_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8/Lab8_2_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab 8/Lab8_2_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8/Lab8_2_2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/.idea/manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../manager/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab10_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/CMakeFiles/Lab10_1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/CMakeFiles/Lab10_1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/CMakeFiles/Lab10_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/CMakeFiles/Lab10_1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/Lab10_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/cmake-build-debug/Lab10_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab10_1_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab9/Lab9_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab9/Lab9_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab9/Lab9_1_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab9/Lab9_1_1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab9/Lab9_1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab9/Lab9_1_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab9/Lab9_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab9/Lab9_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab9/Lab9_2_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab9/Lab9_2_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1_1/cmake-build-debug/CMakeFiles/Lab10_1_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1_1/cmake-build-debug/CMakeFiles/Lab10_1_1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1_1/cmake-build-debug/Lab10_1_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1_1/cmake-build-debug/Lab10_1_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_1_1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_1_1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_2_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_2_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_2_1/cmake-build-debug/CMakeFiles/Lab10_2_1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_2_1/cmake-build-debug/CMakeFiles/Lab10_2_1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_2_1/cmake-build-debug/Lab10_2_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_2_1/cmake-build-debug/Lab10_2_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_2_1/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_2_1/file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab10_2_1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab10_2_1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab10_2_2.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,19 +50,21 @@
     <session id="-1629921133">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1006" />
+          <entry key="cpp" value="1392" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1006" />
+          <entry key="ObjectiveC" value="1392" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -70,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="105">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -80,6 +94,18 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mutId</find>
+      <find>tryId</find>
+      <find>no_readers</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>no_writersId</replace>
+      <replace>no_readersId</replace>
+      <replace>readers</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -115,7 +141,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab10_2_1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -159,27 +185,33 @@
       <updated>1545920930019</updated>
       <workItem from="1545920931663" duration="2234000" />
       <workItem from="1547906081403" duration="6723000" />
+      <workItem from="1548165570496" duration="510000" />
+      <workItem from="1548231412967" duration="3334000" />
+      <workItem from="1548335127271" duration="599000" />
+      <workItem from="1548425689029" duration="2196000" />
+      <workItem from="1548517585497" duration="82000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8957000" />
+    <option name="totallyTimeSpent" value="15678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="737" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4394693" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.12603648" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39966834" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3283582" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -211,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="105">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

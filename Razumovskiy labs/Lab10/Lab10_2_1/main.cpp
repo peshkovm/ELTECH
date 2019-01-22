@@ -8,42 +8,52 @@
 
 using namespace std;
 
-int mutId = 0; //идентификатор мьютекса
+int writersId = 0;
+int semaphoreId=0;
 
-#define SETVALUE 1
-
-void mutInit() {
-    if ((mutId = semget(100, 1, IPC_CREAT | 0666)) < 0) {
-        cerr << "Семафор не создан" << endl;
-        exit(-1);
-    }
-    semctl(mutId, 0, SETVAL, SETVALUE);// установка семафора в изаначальное значение 5
+void writersInit() {
+    writersId = semget(100, 1, IPC_CREAT | 0666);
 }
 
-void mutAcquire() {
+void writersAcquire() {
     struct sembuf op = {0, -1, 0}; //операция захвата
-    semop(mutId, &op, 1);
+    semop(writersId, &op, 1);
 }
 
-void mutRelease() {
+void writersRelease() {
     struct sembuf op = {0, 1, 0}; //операция освобождения
-    semop(mutId, &op, 1);
+    semop(writersId, &op, 1);
 }
 
-int main() {
+void semaphoreInit() {
+    semaphoreId = semget(102, 1, IPC_CREAT | 0666);
+}
+
+void semaphoreAcquire() {
+    struct sembuf op = {0, -1, 0}; //операция захвата
+    semop(semaphoreId, &op, 1);
+}
+
+void semaphoreRelease() {
+    struct sembuf op = {0, 1, 0}; //операция освобождения
+    semop(semaphoreId, &op, 1);
+}
+
+int main(int argc, char **argv) {
     string outFileName = "/home/denis/Desktop/ELTECH/ELTECH/Razumovskiy labs/Lab10/Lab10_2_1/file.txt";
-    ofstream outFile(outFileName,std::ofstream::app);
+    ofstream outFile(outFileName, std::ofstream::app);
 
-    sleep(3);
-
-    mutInit();
-
+    writersInit();
+    semaphoreInit();
 
     for (int i = 0; i < 10; i++) {
-        mutAcquire();
+        writersAcquire();
+        semaphoreAcquire();
         outFile << "string #" << i << endl;
-        cout << "string #" << i << " Writer" << endl;
-        mutRelease();
+        cout << "string #" << i << " " << argv[1] << " " << "writer" << endl;
+        semaphoreRelease();
+        writersRelease();
+        sleep(1);
     }
 
     return 0;
