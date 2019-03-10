@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Lab1.dir/main.cpp.o  -o Lab1 /usr/lib/x86_64-linux-gnu/libmpichcxx.so /usr/lib/x86_64-linux-gnu/libmpich.so 
