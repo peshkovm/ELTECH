@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a82fb1-08c7-45f4-afb9-eac09ce6d85a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab3/.idea/artifacts/Lab3_ear_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/META-INF/application.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/resources/FootballTeam.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/resources/FootballTeam_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/resources/FootballTeam_ru.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab3/src/ru/eltech/labs/Servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="30a82fb1-08c7-45f4-afb9-eac09ce6d85a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltech/labs/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="282">
+              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -218,7 +207,8 @@
       <workItem from="1551095882956" duration="50000" />
       <workItem from="1552223784020" duration="397000" />
       <workItem from="1552224232141" duration="2503000" />
-      <workItem from="1552227474810" duration="1531000" />
+      <workItem from="1552227474810" duration="1605000" />
+      <workItem from="1552232874570" duration="1516000" />
     </task>
     <task id="LOCAL-00001" summary="Lab2">
       <created>1552226721919</created>
@@ -227,17 +217,31 @@
       <option name="project" value="LOCAL" />
       <updated>1552226721919</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lab3">
+      <created>1552229595106</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552229595106</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Lab3">
+      <created>1552229633919</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552229633919</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4481000" />
+    <option name="totallyTimeSpent" value="6071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="737" extended-state="6" />
     <layout>
       <window_info id="Repositories" order="0" weight="0.32954547" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85542166" visible="true" weight="0.26136363" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85542166" visible="true" weight="0.2659091" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -258,7 +262,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.6009934" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.24834438" />
+      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.104304634" />
       <window_info anchor="bottom" id="Web" internal_type="SLIDING" order="14" sideWeight="0.14457831" weight="0.16887417" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.3294702" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -329,7 +333,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lab2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab2" />
+    <MESSAGE value="Lab3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
@@ -369,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltech/labs/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="282">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
