@@ -1,47 +1,41 @@
+import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class MainServlet extends javax.servlet.http.HttpServlet {
-    /**
-     * Process post requests
-     * @param request
-     * @param response
-     * @throws javax.servlet.ServletException
-     * @throws IOException
-     */
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         processReguest(request, response);
     }
 
-    /**
-     * Process get requests
-     * @param request
-     * @param response
-     * @throws javax.servlet.ServletException
-     * @throws IOException
-     */
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         processReguest(request, response);
     }
 
-    /**
-     * Process all type of requests
-     * @param request
-     * @param response
-     * @throws javax.servlet.ServletException
-     * @throws IOException
-     */
     private void processReguest(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        // Задание типа кодировки для параметров запроса
-        request.setCharacterEncoding("utf-8");
-        // Чтение параметра name из запроса
+        Locale locale;
+
+        //Чтение параметров из строки
         String stageParam = request.getParameter("stage");
+        String langParam = request.getParameter("lang");
+
+        if (langParam == null)
+            locale = Locale.getDefault();
+        else if (langParam.equals("ru"))
+            locale = new Locale("ru", "RU");
+        else if (langParam.equals("en"))
+            locale = Locale.ENGLISH;
+        else {
+            response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE,
+                    "Параметр lang может принимать значения en или ru");
+            return;
+        }
         // Задание типа содержимого для ответа (в том числе кодировки)
         response.setContentType("text/html;charset=UTF-8");
+        // Файлы ресурсов book.properties, book_en.properties и book_ru.properties
+        // Установка локализации в соответствии с выбором пользователя
+        ResourceBundle resBundle = ResourceBundle.getBundle("f1Prop", locale);
 
         List<String> stages = new ArrayList<>(Arrays.asList(
                 "<tr>" +
@@ -75,13 +69,13 @@ public class MainServlet extends javax.servlet.http.HttpServlet {
         try (PrintWriter writer = new PrintWriter(new BufferedWriter(response.getWriter()))) {
             // Создание HTML-страницы
             writer.println("<html>");
-            writer.println("<head><title>Формула-1 2017</title></head>");
+            writer.println("<head><title>" + resBundle.getString("header") + "</title></head>");
             writer.println("<body>");
-            writer.println("<h1>Формула-1 2017</h1>");
+            writer.println("<h1>" + resBundle.getString("header") + "</h1>");
             writer.println("<table border='1'>");
             writer.println("<tr>" +
-                    "<td><b>Дата, время</b></td>" +
-                    "<td><b>Этап</b></td>" +
+                    "<td><b>" + resBundle.getString("dateAndTime") + "</b></td>" +
+                    "<td><b>" + resBundle.getString("stage") + "</b></td>" +
                     "<td><b></b></td>" +
                     "</tr>");
             //print stages
