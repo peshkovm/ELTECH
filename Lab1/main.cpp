@@ -1,4 +1,5 @@
 #include <iostream>
+#include <mpich/mpi.h>
 #include "mpi.h"
 
 using namespace std;
@@ -15,8 +16,18 @@ long fibonachi(int n) {
     return a;
 }
 
+long fibonachi_rec(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    return fibonachi_rec(n - 1) + fibonachi_rec(n - 2);
+}
+
 int main(int argc, char **argv) {
-    MPI_Init(&argc,&argv);
+    MPI_Init(&argc, &argv);
     int rank, proc_count;
     long res_;
     MPI_Comm_size(MPI_COMM_WORLD, &proc_count);
@@ -29,7 +40,7 @@ int main(int argc, char **argv) {
             cout << "res " << res_ << endl;
         }
     } else {
-        long res = fibonachi(rank);
+        long res = fibonachi_rec(rank);
         MPI_Send(&res, 1, MPI_LONG, 0, 0, MPI_COMM_WORLD);
     }
     MPI_Finalize();

@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/denis/Desktop/ELTECH/Lab1/main.cpp
+/home/denis/Desktop/ELTECH/Lab2/main.cpp
 iostream
 -
 mpich/mpi.h
 -
 mpi.h
-/home/denis/Desktop/ELTECH/Lab1/mpi.h
+/home/denis/Desktop/ELTECH/Lab2/mpi.h
+cstdlib
+-
+cmath
+-
 
 /usr/include/mpich/mpi.h
 stddef.h

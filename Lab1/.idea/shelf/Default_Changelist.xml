@@ -1,0 +1,14 @@
+<changelist name="Default_Changelist" date="1553441343275" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Default_Changelist/shelved.patch" />
+  <option name="DESCRIPTION" value="Default Changelist" />
+  <binary>
+    <option name="BEFORE_PATH" value="../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/ru/eltech/labs/Servlet.class" />
+    <option name="AFTER_PATH" value="../Lab3/out/artifacts/Lab3_war_exploded/WEB-INF/classes/ru/eltech/labs/Servlet.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Default_Changelist/Servlet.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../Lab3/out/production/Lab3/ru/eltech/labs/Servlet.class" />
+    <option name="AFTER_PATH" value="../Lab3/out/production/Lab3/ru/eltech/labs/Servlet.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Default_Changelist/Servlet1.class" />
+  </binary>
+</changelist>
