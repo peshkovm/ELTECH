@@ -6,7 +6,91 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a82fb1-08c7-45f4-afb9-eac09ce6d85a" name="Default Changelist" comment="" />
+    <list default="true" id="30a82fb1-08c7-45f4-afb9-eac09ce6d85a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/artifacts/Lab7_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/artifacts/Lab7_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__ant_ant_1_6_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__colt_colt_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_gwt_gwt_dev_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_gwt_gwt_servlet_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_gwt_gwt_user_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_jsinterop_jsinterop_annotations_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_google_jsinterop_jsinterop_annotations_sources_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__com_ibm_icu_icu4j_50_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__javax_validation_validation_api_sources_1_0_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_apache_jsp_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_annotations_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_jndi_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_plus_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlets_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_toolchain_jetty_schemas_3_1_M0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_2_13_v20150730.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_2_14_v20151106.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_mortbay_jasper_apache_el_8_0_9_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_mortbay_jasper_apache_jsp_8_0_9_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_ow2_asm_asm_tree_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_ow2_asm_asm_util_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__tapestry_tapestry_4_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/libraries/gwt_user.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/Lab7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/src/main/java/ru/eltech/shared/FootballersTeam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7_1/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/.idea/libraries/gwt_user.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/com/WebApp7/WebApp7.gwt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/com/WebApp7/client/GreetingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/com/WebApp7/client/GreetingServiceAsync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/com/WebApp7/client/WebApp7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/com/WebApp7/server/GreetingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/src/com/WebApp7/shared/BookReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab7/web/WebApp7.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltech/labs/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="192">
+              <caret line="23" column="114" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="114" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,12 +212,14 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552226721512" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -209,6 +294,7 @@
       <workItem from="1552224232141" duration="2503000" />
       <workItem from="1552227474810" duration="1605000" />
       <workItem from="1552232874570" duration="1516000" />
+      <workItem from="1554044421161" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="Lab2">
       <created>1552226721919</created>
@@ -235,13 +321,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6071000" />
+    <option name="totallyTimeSpent" value="6077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="737" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Repositories" order="0" weight="0.32954547" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85542166" visible="true" weight="0.2659091" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.85542166" visible="true" weight="0.27045456" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -374,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltech/labs/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="192">
+          <caret line="23" column="114" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="114" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
