@@ -13,15 +13,16 @@ public class TimeoutCLHTest {
     static ExecutorService executor;
     double res = 0;
     int count = 1;
-    static Random random = new Random();
 
     public double main(String[] args) throws InterruptedException {
         executor = Executors.newFixedThreadPool(Integer.valueOf(args[0]));
 
-        Runnable runnable = Boolean.valueOf(args[3]) ? () -> res = Math.pow(2, count++) + 1 : () -> {
+        Runnable runnable = Boolean.valueOf(args[3]) ? () -> {
+            res = Math.pow(2, count++);
+        } : () -> {
             try {
                 lock.tryLock(Integer.valueOf(args[2]), TimeUnit.SECONDS);
-                res = Math.pow(2, count++) + 1;
+                res = Math.pow(2, count++);
             } finally {
                 lock.unlock();
             }
