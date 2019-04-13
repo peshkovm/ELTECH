@@ -2,34 +2,52 @@ package eltech;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Process {
     public static void main(String[] args) throws InterruptedException {
-        List<Double> list = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            TimeoutCLHTest timeoutCLHTest = new TimeoutCLHTest();
-            Double res = timeoutCLHTest.main(new String[]{"10", "10", "1", "true"});
-            list.add(res);
+        Lock[] arr = {new TimeoutCLH(), new ReentrantLock(), new Lock() {
+            @Override
+            public void lock() {
+
+            }
+
+            @Override
+            public void lockInterruptibly() throws InterruptedException {
+
+            }
+
+            @Override
+            public boolean tryLock() {
+                return false;
+            }
+
+            @Override
+            public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
+                return false;
+            }
+
+            @Override
+            public void unlock() {
+
+            }
+
+            @Override
+            public Condition newCondition() {
+                return null;
+            }
+        }};
+        for (int i = 0; i < 3; i++) {
+            for (int j = 1; j < 10; j++) {
+                if (1000000 % j == 0) {
+                    Test Test = new Test();
+                    long res = Test.main(4, j, 10, arr[i]);
+                    System.out.println(arr[i] + " " + j + " " + res);
+                }
+            }
         }
-        list.stream().distinct().forEach(System.out::println);
-        list.clear();
-        System.out.println();
-        for (int i = 0; i < 100; i++) {
-            TimeoutCLHTest timeoutCLHTest = new TimeoutCLHTest();
-            Double res = timeoutCLHTest.main(new String[]{"10", "10", "1", "false"});
-            list.add(res);
-        }
-        list.stream().distinct().forEach(System.out::println);
-
-        System.out.println();
-
-        double res = 0;
-        int count = 1;
-
-        for (int i = 0; i < 10; i++) {
-            res = Math.pow(2, count++);
-        }
-
-        System.out.println(res);
     }
 }
