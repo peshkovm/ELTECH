@@ -40,11 +40,11 @@ public class Process {
                 return null;
             }
         }};
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 1; j < 10; j++) {
                 if (1000000 % j == 0) {
-                    Test Test = new Test();
-                    long res = Test.main(4, j, 10, arr[i]);
+                    Test test = new Test();
+                    long res = test.main(j, j, 1, arr[i]);
                     System.out.println(arr[i] + " " + j + " " + res);
                 }
             }

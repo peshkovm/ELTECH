@@ -19,7 +19,7 @@ public class Test {
         Runnable runnable = () -> {
             for (int i = 0; i < 1000000 / threads; i++) {
                 try {
-                    lock.tryLock(time, TimeUnit.SECONDS);
+                    lock.tryLock(time, TimeUnit.MILLISECONDS);
                     count++;
                 } catch (InterruptedException e) {
                     e.printStackTrace();
