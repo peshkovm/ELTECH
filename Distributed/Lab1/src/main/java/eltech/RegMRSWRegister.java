@@ -4,6 +4,12 @@ public class RegMRSWRegister implements RegisterInteger {
     private static int RANGE = Byte.MAX_VALUE - Byte.MIN_VALUE + 1;
     RegBooleanMRSWRegister[] r_bit = new RegBooleanMRSWRegister[RANGE]; // regular boolean MRSW
 
+    {
+        for (int i = 0; i < r_bit.length; i++) {
+            r_bit[i] = new RegBooleanMRSWRegister(RANGE);
+        }
+    }
+
     public RegMRSWRegister(int capacity) {
         for (int i = 1; i < r_bit.length; i++)
             r_bit[i].write(false);

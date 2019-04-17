@@ -2,7 +2,7 @@ package eltech;
 
 public class RegBooleanMRSWRegister implements RegisterBoolean {
     ThreadLocal<Boolean> last;
-    SafeBooleanMRSWRegister s_value; // safe MRSW register
+    SafeBooleanMRSWRegister s_value = new SafeBooleanMRSWRegister(100); // safe MRSW register
 
     RegBooleanMRSWRegister(int capacity) {
         last = ThreadLocal.withInitial(() -> false);
