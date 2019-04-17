@@ -1,6 +1,5 @@
 package eltech;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,7 +19,7 @@ public class Test {
         Runnable read = () -> {
             for (int i = 0; i < 10; i++) {
                 Boolean a = register.read();
-                System.out.println(Thread.currentThread().getId() + " " + "read" + " " + a);
+                System.out.println("i=" + " " + i + " " + "id=" + " " + Thread.currentThread().getId() + " " + "read" + " " + a);
             }
         };
 
@@ -28,7 +27,7 @@ public class Test {
             for (int i = 0; i < 10; i++) {
                 boolean b = rand.nextBoolean();
                 register.write(b);
-                System.out.println(Thread.currentThread().getId() + " " + "write" + " " + b);
+                System.out.println("i=" + " " + i + " " + "id=" + " " + Thread.currentThread().getId() + " " + "write" + " " + b);
             }
         };
 
@@ -39,15 +38,15 @@ public class Test {
         Runnable read = () -> {
             for (int i = 0; i < 10; i++) {
                 Integer a = register.read();
-                System.out.println(Thread.currentThread().getId() + " " + "read" + " " + a);
+                System.out.println("i=" + " " + i + " " + "id=" + " " + Thread.currentThread().getId() + " " + "read" + " " + a);
             }
         };
 
         Runnable write = () -> {
             for (int i = 0; i < 10; i++) {
-                Integer b = a.getAndIncrement();
+                int b = a.getAndIncrement();
                 register.write(b);
-                System.out.println(Thread.currentThread().getId() + " " + "write" + " " + b);
+                System.out.println("i=" + " " + i + " " + "id=" + " " + Thread.currentThread().getId() + " " + "write" + " " + b);
             }
         };
 
@@ -70,14 +69,15 @@ public class Test {
             callableTasks.add(writes);
         }
 
+        Collections.shuffle(callableTasks);
+
         long starttime;
         long endtime;
         starttime = System.currentTimeMillis();
 
-        executor.invokeAll(callableTasks);
+        List<Future<Object>> futures = executor.invokeAll(callableTasks);
         endtime = System.currentTimeMillis();
         executor.shutdown();
-
         return endtime - starttime;
     }
 }

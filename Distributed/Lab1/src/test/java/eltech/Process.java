@@ -26,6 +26,6 @@ public class Process {
         plot.pack();
         plot.setVisible(true);*/
         Test test = new Test();
-        test.main(1, 1, new SafeBooleanMRSWRegister(100));
+        test.main(5, 1, new SafeBooleanMRSWRegister(100));
     }
 }
