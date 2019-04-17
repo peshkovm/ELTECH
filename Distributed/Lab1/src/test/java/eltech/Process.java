@@ -3,44 +3,12 @@ package eltech;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Process {
+
     public static void main(String[] args) throws InterruptedException {
-        Lock[] arr = {new TimeoutCLH(), new ReentrantLock(), new Lock() {
-            @Override
-            public void lock() {
-
-            }
-
-            @Override
-            public void lockInterruptibly() throws InterruptedException {
-
-            }
-
-            @Override
-            public boolean tryLock() {
-                return false;
-            }
-
-            @Override
-            public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
-                return false;
-            }
-
-            @Override
-            public void unlock() {
-
-            }
-
-            @Override
-            public Condition newCondition() {
-                return null;
-            }
-        }};
+        /*Lock[] arr = {};
         List<PlotDataPair> list = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
             List<PlotDataPair.TimeExecThreadCountPair> list1 = new ArrayList<>();
@@ -56,6 +24,8 @@ public class Process {
         }
         Plot plot = new Plot("Plot", list);
         plot.pack();
-        plot.setVisible(true);
+        plot.setVisible(true);*/
+        Test test = new Test();
+        test.main(1, 1, new SafeBooleanMRSWRegister(100));
     }
 }
