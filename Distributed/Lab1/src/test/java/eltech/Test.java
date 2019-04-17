@@ -16,6 +16,8 @@ public class Test {
     Random rand = new Random();
 
     public long main(int read_cont, int write_count, RegisterBoolean register) throws InterruptedException {
+        System.out.println(register.getClass());
+        System.out.println();
         Runnable read = () -> {
             for (int i = 0; i < 10; i++) {
                 Boolean a = register.read();
@@ -35,6 +37,8 @@ public class Test {
     }
 
     public long main(int read_cont, int write_count, RegisterInteger register) throws InterruptedException {
+        System.out.println(register.getClass());
+        System.out.println();
         Runnable read = () -> {
             for (int i = 0; i < 10; i++) {
                 Integer a = register.read();

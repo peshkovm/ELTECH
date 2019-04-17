@@ -1,27 +1,21 @@
 package eltech;
 
-public class RegBooleanMRSWRegister implements Register<Boolean> {
+public class RegBooleanMRSWRegister implements RegisterBoolean {
     ThreadLocal<Boolean> last;
-    boolean s_value; // safe MRSW register
+    SafeBooleanMRSWRegister s_value; // safe MRSW register
 
     RegBooleanMRSWRegister(int capacity) {
-        last = new ThreadLocal<Boolean>() {
-            protected Boolean initialValue() {
-                return false;
-            }
-
-            ;
-        };
+        last = ThreadLocal.withInitial(() -> false);
     }
 
     public void write(Boolean x) {
         if (x != last.get()) {
             last.set(x);
-            s_value = x;
+            s_value.write(x);
         }
     }
 
     public Boolean read() {
-        return s_value;
+        return s_value.read();
     }
 }
