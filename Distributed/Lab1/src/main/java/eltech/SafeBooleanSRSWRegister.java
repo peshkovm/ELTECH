@@ -1,7 +1,7 @@
 package eltech;
 
 public class SafeBooleanSRSWRegister implements RegisterBoolean {
-    private volatile boolean value = false;
+    private volatile Boolean value = false;
 
     @Override
     public Boolean read() {
