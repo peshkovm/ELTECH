@@ -1,1 +1,1 @@
-# ELTECH
+# ELTECH лабораторные раьоты Linux C++
