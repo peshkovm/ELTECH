@@ -1,1 +1,1 @@
-# ELTECH WEB программирование Java
+# ELTECH Web программирование Java C++
