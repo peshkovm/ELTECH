@@ -3,30 +3,49 @@ package com.eltech.common;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Solution<S, A> extends ArrayList<Node<S, A>> {
-    public Solution(Node<S, A> node) {
-        this.add(node);
+public class Solution<S, A> {
+    int capacity = 0;
+    public Node<S, A> node = null;
+    int depth = 0;
+    int time;
+
+    public Solution(Node<S, A> node, int max_capacity, int time) {
+        this.node = node;
+        this.capacity = max_capacity;
+        this.time = time;
     }
 
     public Solution() {
-        super();
+    }
+
+    public int getPathCost() {
+        return node != null ? node.getPath_Cost() : 0;
     }
 
     @Override
     public String toString() {
-        if (!this.isEmpty()) {
-            Node<S, A> node = this.remove(0);
-
-            while (node != null) {
-                this.add(node);
-                node = node.getParent();
-            }
-
-            Collections.reverse(this);
-
-            return super.toString();
+        StringBuilder str = new StringBuilder();
+        while (node != null) {
+            str.insert(0, node + "\n");
+            node = node.getParent();
+            //depth++;
         }
+        return str.toString();
+    }
 
-        return super.toString();
+    public String memory() {
+        return String.valueOf(capacity);
+    }
+
+    public String depth() {
+        return String.valueOf(depth);
+    }
+
+    public String time() {
+        return String.valueOf(time);
+    }
+
+    public boolean isExists() {
+        return node != null;
     }
 }
